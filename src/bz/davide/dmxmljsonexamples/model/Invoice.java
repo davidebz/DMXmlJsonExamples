@@ -30,6 +30,9 @@ public class Invoice
 
    ArrayList<InvoiceRow> rows = new ArrayList<InvoiceRow>();
 
+   // transient fields are not marshalled/unmarshalled
+   transient long        timestamp;
+
    public Invoice()
    {
    }

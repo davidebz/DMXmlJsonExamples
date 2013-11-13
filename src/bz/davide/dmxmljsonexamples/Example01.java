@@ -38,7 +38,10 @@ public class Example01
       invoice.addRow(2, bike);
       invoice.addRow(1, new DVD("Hackers"));
 
-      XMLStructure xmlStructure = new XMLStructure("invoice");
+      //XMLStructureRules structureRules = new XMLStructureRules();
+      //structureRules.setPrimitiveTypePolicy(PrimitiveTypePolicy.ATTRIBUTE);
+
+      XMLStructure xmlStructure = new XMLStructure("invoice" /*, structureRules*/);
       Example01Marshaller example01Marshaller = new Example01Marshaller();
       example01Marshaller.marschall(invoice, xmlStructure);
 

@@ -4,14 +4,14 @@
  *                                                                               *
  *********************************************************************************/
 
-package bz.davide.dmxmljsonexamples.model;
+package bz.davide.dmxmljsonexamples.model.invoice;
 
 
 public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.Marshaller
 {
    protected Example01Marshaller_Helper()
    {
-      this.putClassMarshaller("bz.davide.dmxmljsonexamples.model.Invoice", new bz.davide.dmxmljson.marshalling.ClassMarshaller() {
+      this.putClassMarshaller("bz.davide.dmxmljsonexamples.model.invoice.Invoice", new bz.davide.dmxmljson.marshalling.ClassMarshaller() {
          @Override public void marshall(Object obj, String compileTimeClassName, bz.davide.dmxmljson.marshalling.Structure structure, java.util.IdentityHashMap<Object, bz.davide.dmxmljson.marshalling.Structure> identities, long[] seq, boolean superClass) throws Exception {
             if (!superClass) {
                if (isReference(structure, obj, identities, seq))
@@ -21,15 +21,15 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
             }
             Object value;
             // customer
-            value = ((bz.davide.dmxmljsonexamples.model.Invoice)obj).customer;
+            value = ((bz.davide.dmxmljsonexamples.model.invoice.Invoice)obj).customer;
             if (value == null)
                structure.property("customer").nullValue();
             else
             {
-                     internalMarschall(value, value.getClass().getName(),"bz.davide.dmxmljsonexamples.model.Person", structure.property("customer").structure(), identities, seq, false);
+                     internalMarschall(value, value.getClass().getName(),"bz.davide.dmxmljsonexamples.model.invoice.Person", structure.property("customer").structure(), identities, seq, false);
             }
             // date
-            value = ((bz.davide.dmxmljsonexamples.model.Invoice)obj).date;
+            value = ((bz.davide.dmxmljsonexamples.model.invoice.Invoice)obj).date;
             if (value == null)
                structure.property("date").nullValue();
             else
@@ -37,7 +37,7 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
                     structure.property("date").string((String)value);                          
             }
             // number
-            value = ((bz.davide.dmxmljsonexamples.model.Invoice)obj).number;
+            value = ((bz.davide.dmxmljsonexamples.model.invoice.Invoice)obj).number;
             if (value == null)
                structure.property("number").nullValue();
             else
@@ -45,7 +45,7 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
                     structure.property("number").integer((Integer)value);                          
             }
             // rows
-            value = ((bz.davide.dmxmljsonexamples.model.Invoice)obj).rows;
+            value = ((bz.davide.dmxmljsonexamples.model.invoice.Invoice)obj).rows;
             if (value == null)
                structure.property("rows").nullValue();
             else
@@ -56,14 +56,14 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
                   if (o == null)                                              
                      array.item().nullValue();                                
                   else                                                        
-                     internalMarschall(o, o.getClass().getName(), "bz.davide.dmxmljsonexamples.model.InvoiceRow", array.item().structure(), identities, seq, false);
+                     internalMarschall(o, o.getClass().getName(), "bz.davide.dmxmljsonexamples.model.invoice.InvoiceRow", array.item().structure(), identities, seq, false);
                }                                                              
             }
             if (!superClass)
                structure.close();
          }
       });
-      this.putClassMarshaller("bz.davide.dmxmljsonexamples.model.DVD", new bz.davide.dmxmljson.marshalling.ClassMarshaller() {
+      this.putClassMarshaller("bz.davide.dmxmljsonexamples.model.invoice.DVD", new bz.davide.dmxmljson.marshalling.ClassMarshaller() {
          @Override public void marshall(Object obj, String compileTimeClassName, bz.davide.dmxmljson.marshalling.Structure structure, java.util.IdentityHashMap<Object, bz.davide.dmxmljson.marshalling.Structure> identities, long[] seq, boolean superClass) throws Exception {
             if (!superClass) {
                if (isReference(structure, obj, identities, seq))
@@ -71,10 +71,10 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
                identities.put(obj, structure);
                structure.open(shortName(compileTimeClassName), shortName(obj.getClass().getName()), null);
             }
-            internalMarschall(obj, "bz.davide.dmxmljsonexamples.model.Product", "N/A",structure, identities, seq, true);
+            internalMarschall(obj, "bz.davide.dmxmljsonexamples.model.invoice.Product", "N/A",structure, identities, seq, true);
             Object value;
             // title
-            value = ((bz.davide.dmxmljsonexamples.model.DVD)obj).title;
+            value = ((bz.davide.dmxmljsonexamples.model.invoice.DVD)obj).title;
             if (value == null)
                structure.property("title").nullValue();
             else
@@ -85,7 +85,7 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
                structure.close();
          }
       });
-      this.putClassMarshaller("bz.davide.dmxmljsonexamples.model.Person", new bz.davide.dmxmljson.marshalling.ClassMarshaller() {
+      this.putClassMarshaller("bz.davide.dmxmljsonexamples.model.invoice.Person", new bz.davide.dmxmljson.marshalling.ClassMarshaller() {
          @Override public void marshall(Object obj, String compileTimeClassName, bz.davide.dmxmljson.marshalling.Structure structure, java.util.IdentityHashMap<Object, bz.davide.dmxmljson.marshalling.Structure> identities, long[] seq, boolean superClass) throws Exception {
             if (!superClass) {
                if (isReference(structure, obj, identities, seq))
@@ -95,7 +95,7 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
             }
             Object value;
             // name
-            value = ((bz.davide.dmxmljsonexamples.model.Person)obj).name;
+            value = ((bz.davide.dmxmljsonexamples.model.invoice.Person)obj).name;
             if (value == null)
                structure.property("name").nullValue();
             else
@@ -103,7 +103,7 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
                     structure.property("name").string((String)value);                          
             }
             // nr
-            value = ((bz.davide.dmxmljsonexamples.model.Person)obj).nr;
+            value = ((bz.davide.dmxmljsonexamples.model.invoice.Person)obj).nr;
             if (value == null)
                structure.property("nr").nullValue();
             else
@@ -111,7 +111,7 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
                     structure.property("nr").integer((Integer)value);                          
             }
             // street
-            value = ((bz.davide.dmxmljsonexamples.model.Person)obj).street;
+            value = ((bz.davide.dmxmljsonexamples.model.invoice.Person)obj).street;
             if (value == null)
                structure.property("street").nullValue();
             else
@@ -122,7 +122,7 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
                structure.close();
          }
       });
-      this.putClassMarshaller("bz.davide.dmxmljsonexamples.model.InvoiceRow", new bz.davide.dmxmljson.marshalling.ClassMarshaller() {
+      this.putClassMarshaller("bz.davide.dmxmljsonexamples.model.invoice.InvoiceRow", new bz.davide.dmxmljson.marshalling.ClassMarshaller() {
          @Override public void marshall(Object obj, String compileTimeClassName, bz.davide.dmxmljson.marshalling.Structure structure, java.util.IdentityHashMap<Object, bz.davide.dmxmljson.marshalling.Structure> identities, long[] seq, boolean superClass) throws Exception {
             if (!superClass) {
                if (isReference(structure, obj, identities, seq))
@@ -132,15 +132,15 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
             }
             Object value;
             // product
-            value = ((bz.davide.dmxmljsonexamples.model.InvoiceRow)obj).product;
+            value = ((bz.davide.dmxmljsonexamples.model.invoice.InvoiceRow)obj).product;
             if (value == null)
                structure.property("product").nullValue();
             else
             {
-                     internalMarschall(value, value.getClass().getName(),"bz.davide.dmxmljsonexamples.model.Product", structure.property("product").structure(), identities, seq, false);
+                     internalMarschall(value, value.getClass().getName(),"bz.davide.dmxmljsonexamples.model.invoice.Product", structure.property("product").structure(), identities, seq, false);
             }
             // quantity
-            value = ((bz.davide.dmxmljsonexamples.model.InvoiceRow)obj).quantity;
+            value = ((bz.davide.dmxmljsonexamples.model.invoice.InvoiceRow)obj).quantity;
             if (value == null)
                structure.property("quantity").nullValue();
             else
@@ -151,7 +151,7 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
                structure.close();
          }
       });
-      this.putClassMarshaller("bz.davide.dmxmljsonexamples.model.Product", new bz.davide.dmxmljson.marshalling.ClassMarshaller() {
+      this.putClassMarshaller("bz.davide.dmxmljsonexamples.model.invoice.Product", new bz.davide.dmxmljson.marshalling.ClassMarshaller() {
          @Override public void marshall(Object obj, String compileTimeClassName, bz.davide.dmxmljson.marshalling.Structure structure, java.util.IdentityHashMap<Object, bz.davide.dmxmljson.marshalling.Structure> identities, long[] seq, boolean superClass) throws Exception {
             if (!superClass) {
                if (isReference(structure, obj, identities, seq))
@@ -161,7 +161,7 @@ public class Example01Marshaller_Helper extends bz.davide.dmxmljson.marshalling.
             }
             Object value;
             // name
-            value = ((bz.davide.dmxmljsonexamples.model.Product)obj).name;
+            value = ((bz.davide.dmxmljsonexamples.model.invoice.Product)obj).name;
             if (value == null)
                structure.property("name").nullValue();
             else

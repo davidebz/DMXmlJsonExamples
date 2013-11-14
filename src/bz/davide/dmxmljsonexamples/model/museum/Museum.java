@@ -17,19 +17,11 @@ You should have received a copy of the GNU Lesser General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>
 */
 
-package bz.davide.dmxmljsonexamples.model;
+package bz.davide.dmxmljsonexamples.model.museum;
 
-public class Product
+public class Museum
 {
-   String name;
-
-   public Product(String name)
-   {
-      this.name = name;
-   }
-
-   protected Product(Void void1)
-   {
-   }
-
+   String name_it;
+   String name_de;
+   String city;
 }

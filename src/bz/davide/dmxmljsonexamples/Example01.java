@@ -24,9 +24,9 @@ import java.io.ByteArrayInputStream;
 import bz.davide.dmxmljson.marshalling.json.JSONStructure;
 import bz.davide.dmxmljson.marshalling.xml.XMLStructure;
 import bz.davide.dmxmljson.unmarshalling.xml.W3CXMLStructure;
-import bz.davide.dmxmljsonexamples.model.DVD;
-import bz.davide.dmxmljsonexamples.model.Invoice;
-import bz.davide.dmxmljsonexamples.model.Product;
+import bz.davide.dmxmljsonexamples.model.invoice.DVD;
+import bz.davide.dmxmljsonexamples.model.invoice.Invoice;
+import bz.davide.dmxmljsonexamples.model.invoice.Product;
 
 public class Example01
 {

@@ -4,20 +4,20 @@
  *                                                                               *
  *********************************************************************************/
 
-package bz.davide.dmxmljsonexamples.model;
+package bz.davide.dmxmljsonexamples.model.invoice;
 
 
 public class Example01Unmarshaller_Helper extends bz.davide.dmxmljson.unmarshalling.Unmarshaller
 {
    protected Example01Unmarshaller_Helper()
    {
-      this.putInstanceFactory("bz.davide.dmxmljsonexamples.model.Invoice", new bz.davide.dmxmljson.unmarshalling.InstanceFactory() {
+      this.putInstanceFactory("bz.davide.dmxmljsonexamples.model.invoice.Invoice", new bz.davide.dmxmljson.unmarshalling.InstanceFactory() {
          @Override public Object newInstance() throws Exception {
-            return new bz.davide.dmxmljsonexamples.model.Invoice((Void)null);
+            return new bz.davide.dmxmljsonexamples.model.invoice.Invoice((Void)null);
          }
       });
 
-      this.putClassUnmarshaller("bz.davide.dmxmljsonexamples.model.Invoice", new bz.davide.dmxmljson.unmarshalling.ClassUnmarshaller() {
+      this.putClassUnmarshaller("bz.davide.dmxmljsonexamples.model.invoice.Invoice", new bz.davide.dmxmljson.unmarshalling.ClassUnmarshaller() {
          @Override public void unmarshall(bz.davide.dmxmljson.unmarshalling.Structure structure, Object obj, java.util.HashMap<String, Object> identities) throws Exception {
             String id = structure.getId();
             if (id != null)
@@ -31,11 +31,11 @@ public class Example01Unmarshaller_Helper extends bz.davide.dmxmljson.unmarshall
                {
                   String refid = value.structure().getRefId();    
                   if (refid != null)                              
-                     ((Invoice)obj).customer = (bz.davide.dmxmljsonexamples.model.Person)identities.get(refid);
+                     ((Invoice)obj).customer = (bz.davide.dmxmljsonexamples.model.invoice.Person)identities.get(refid);
                   else {
                      Object o = newInstance(value.structure().getRuntimeClassName("Person"));              
                      internalUnmarschall(value.structure(), o.getClass().getName(), o, identities); 
-                     ((Invoice)obj).customer = (bz.davide.dmxmljsonexamples.model.Person)o;
+                     ((Invoice)obj).customer = (bz.davide.dmxmljsonexamples.model.invoice.Person)o;
                   }
                }
             // date
@@ -81,15 +81,15 @@ public class Example01Unmarshaller_Helper extends bz.davide.dmxmljson.unmarshall
                }
          }
       });
-      this.putInstanceFactory("bz.davide.dmxmljsonexamples.model.DVD", new bz.davide.dmxmljson.unmarshalling.InstanceFactory() {
+      this.putInstanceFactory("bz.davide.dmxmljsonexamples.model.invoice.DVD", new bz.davide.dmxmljson.unmarshalling.InstanceFactory() {
          @Override public Object newInstance() throws Exception {
-            return new bz.davide.dmxmljsonexamples.model.DVD((Void)null);
+            return new bz.davide.dmxmljsonexamples.model.invoice.DVD((Void)null);
          }
       });
 
-      this.putClassUnmarshaller("bz.davide.dmxmljsonexamples.model.DVD", new bz.davide.dmxmljson.unmarshalling.ClassUnmarshaller() {
+      this.putClassUnmarshaller("bz.davide.dmxmljsonexamples.model.invoice.DVD", new bz.davide.dmxmljson.unmarshalling.ClassUnmarshaller() {
          @Override public void unmarshall(bz.davide.dmxmljson.unmarshalling.Structure structure, Object obj, java.util.HashMap<String, Object> identities) throws Exception {
-            internalUnmarschall(structure, "bz.davide.dmxmljsonexamples.model.Product", obj, identities);
+            internalUnmarschall(structure, "bz.davide.dmxmljsonexamples.model.invoice.Product", obj, identities);
             String id = structure.getId();
             if (id != null)
                identities.put(id, obj);
@@ -104,13 +104,13 @@ public class Example01Unmarshaller_Helper extends bz.davide.dmxmljson.unmarshall
                }
          }
       });
-      this.putInstanceFactory("bz.davide.dmxmljsonexamples.model.Person", new bz.davide.dmxmljson.unmarshalling.InstanceFactory() {
+      this.putInstanceFactory("bz.davide.dmxmljsonexamples.model.invoice.Person", new bz.davide.dmxmljson.unmarshalling.InstanceFactory() {
          @Override public Object newInstance() throws Exception {
-            return new bz.davide.dmxmljsonexamples.model.Person((Void)null);
+            return new bz.davide.dmxmljsonexamples.model.invoice.Person((Void)null);
          }
       });
 
-      this.putClassUnmarshaller("bz.davide.dmxmljsonexamples.model.Person", new bz.davide.dmxmljson.unmarshalling.ClassUnmarshaller() {
+      this.putClassUnmarshaller("bz.davide.dmxmljsonexamples.model.invoice.Person", new bz.davide.dmxmljson.unmarshalling.ClassUnmarshaller() {
          @Override public void unmarshall(bz.davide.dmxmljson.unmarshalling.Structure structure, Object obj, java.util.HashMap<String, Object> identities) throws Exception {
             String id = structure.getId();
             if (id != null)
@@ -142,13 +142,13 @@ public class Example01Unmarshaller_Helper extends bz.davide.dmxmljson.unmarshall
                }
          }
       });
-      this.putInstanceFactory("bz.davide.dmxmljsonexamples.model.InvoiceRow", new bz.davide.dmxmljson.unmarshalling.InstanceFactory() {
+      this.putInstanceFactory("bz.davide.dmxmljsonexamples.model.invoice.InvoiceRow", new bz.davide.dmxmljson.unmarshalling.InstanceFactory() {
          @Override public Object newInstance() throws Exception {
-            return new bz.davide.dmxmljsonexamples.model.InvoiceRow((Void)null);
+            return new bz.davide.dmxmljsonexamples.model.invoice.InvoiceRow((Void)null);
          }
       });
 
-      this.putClassUnmarshaller("bz.davide.dmxmljsonexamples.model.InvoiceRow", new bz.davide.dmxmljson.unmarshalling.ClassUnmarshaller() {
+      this.putClassUnmarshaller("bz.davide.dmxmljsonexamples.model.invoice.InvoiceRow", new bz.davide.dmxmljson.unmarshalling.ClassUnmarshaller() {
          @Override public void unmarshall(bz.davide.dmxmljson.unmarshalling.Structure structure, Object obj, java.util.HashMap<String, Object> identities) throws Exception {
             String id = structure.getId();
             if (id != null)
@@ -162,11 +162,11 @@ public class Example01Unmarshaller_Helper extends bz.davide.dmxmljson.unmarshall
                {
                   String refid = value.structure().getRefId();    
                   if (refid != null)                              
-                     ((InvoiceRow)obj).product = (bz.davide.dmxmljsonexamples.model.Product)identities.get(refid);
+                     ((InvoiceRow)obj).product = (bz.davide.dmxmljsonexamples.model.invoice.Product)identities.get(refid);
                   else {
                      Object o = newInstance(value.structure().getRuntimeClassName("Product"));              
                      internalUnmarschall(value.structure(), o.getClass().getName(), o, identities); 
-                     ((InvoiceRow)obj).product = (bz.davide.dmxmljsonexamples.model.Product)o;
+                     ((InvoiceRow)obj).product = (bz.davide.dmxmljsonexamples.model.invoice.Product)o;
                   }
                }
             // quantity
@@ -179,13 +179,13 @@ public class Example01Unmarshaller_Helper extends bz.davide.dmxmljson.unmarshall
                }
          }
       });
-      this.putInstanceFactory("bz.davide.dmxmljsonexamples.model.Product", new bz.davide.dmxmljson.unmarshalling.InstanceFactory() {
+      this.putInstanceFactory("bz.davide.dmxmljsonexamples.model.invoice.Product", new bz.davide.dmxmljson.unmarshalling.InstanceFactory() {
          @Override public Object newInstance() throws Exception {
-            return new bz.davide.dmxmljsonexamples.model.Product((Void)null);
+            return new bz.davide.dmxmljsonexamples.model.invoice.Product((Void)null);
          }
       });
 
-      this.putClassUnmarshaller("bz.davide.dmxmljsonexamples.model.Product", new bz.davide.dmxmljson.unmarshalling.ClassUnmarshaller() {
+      this.putClassUnmarshaller("bz.davide.dmxmljsonexamples.model.invoice.Product", new bz.davide.dmxmljson.unmarshalling.ClassUnmarshaller() {
          @Override public void unmarshall(bz.davide.dmxmljson.unmarshalling.Structure structure, Object obj, java.util.HashMap<String, Object> identities) throws Exception {
             String id = structure.getId();
             if (id != null)

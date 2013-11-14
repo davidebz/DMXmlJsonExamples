@@ -17,20 +17,18 @@ You should have received a copy of the GNU Lesser General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>
 */
 
-package bz.davide.dmxmljsonexamples.model;
+package bz.davide.dmxmljsonexamples.model.invoice;
 
-public class DVD extends Product
+public class InvoiceRow
 {
-   String title;
-
-   public DVD(String title)
+   public InvoiceRow()
    {
-      super("dvd");
-      this.title = title;
    }
 
-   protected DVD(Void void1)
+   protected InvoiceRow(Void void1)
    {
-      super(void1);
    }
+
+   int     quantity;
+   Product product;
 }
